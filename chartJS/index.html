@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Graficos TopIndicators</title>
+</head>
+<body>
+    <div>
+      <canvas id="alunos" width="300" height="100"></canvas>
+    </div>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+  const ctx = document.getElementById('alunos');
+
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Julho'],
+      datasets: [{
+        label: 'Alunos',
+        data: [0, 35, 34, 33, 32, 32],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      title: {
+        display: true,
+        text: 'Quantidade de alunos no Curso Tec Informatica'
+      }
+    }
+  });
+</script>
+</html>
